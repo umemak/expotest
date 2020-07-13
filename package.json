@@ -37,7 +37,13 @@
     "@babel/core": "^7.8.6",
     "@types/react": "~16.9.23",
     "@types/react-native": "~0.62.13",
+    "babel-eslint": "^10.1.0",
     "babel-preset-expo": "~8.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
     "jest-expo": "~38.0.0",
     "typescript": "~3.9.5"
   },
