@@ -1,14 +1,13 @@
 import React from 'react';
-// import { View, Text } from 'react-native';
 import {
   AppLoading,
   Asset,
   Font,
 } from 'expo';
 /* from app */
-const fonts = require('./src/fonts.js');
-const images = require('./src/images');
-const AppNavigator = require('./src/navigation/AppNavigator');
+import fonts from './src/fonts';
+import images from './src/images';
+import Navigation from './src';
 
 export default class App extends React.Component {
   static defaultProps = {
@@ -44,7 +43,7 @@ export default class App extends React.Component {
       );
     }
     return (
-      <AppNavigator />
+      <Navigation />
     )
   }
 }
