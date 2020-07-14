@@ -1,11 +1,11 @@
 import { Constants } from 'expo';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import HomeScreen from 'app/src/screens/HomeScreen';
-import SearchScreen from 'app/src/screens/SearchScreen';
-import NotificationScreen from 'app/src/screens/NotificationScreen';
-import UserScreen from 'app/src/screens/UserScreen';
+import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/SearchScreen';
+import NotificationScreen from '../screens/NotificationScreen';
+import UserScreen from '../screens/UserScreen';
 import {
   HomeTabIcon,
   SearchTabIcon,
@@ -13,7 +13,7 @@ import {
   NotificationTabIcon,
   MeTabIcon,
   TabBar,
-} from 'app/src/components/Tab';
+} from '../components/Tab';
 
 const createTabStack = (title, screen) => createStackNavigator({
   [title]: { screen },
@@ -61,7 +61,8 @@ export default createBottomTabNavigator(
       activeTintColor: '#333',
       inactiveTintColor: '#bbb',
       style: {
-        backgroundColor: Constants.manifest.extra.backgroundColor,
+        // backgroundColor: Constants.manifest.extra.backgroundColor,
+        backgroundColor: '#fafafa',
       },
     },
     tabBarComponent: TabBar,

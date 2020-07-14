@@ -1,4 +1,4 @@
-const icon = require('app/assets/images/icon.jpg');
+const icon = require('../assets/images/icon.png');
 
 const images = {
   icon,

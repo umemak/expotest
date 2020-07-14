@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+// import { View, Text } from 'react-native';
 import {
   AppLoading,
   Asset,
   Font,
 } from 'expo';
 /* from app */
-const fonts = require('app/src/fonts');
-const images = require('app/src/images');
+const fonts = require('./src/fonts.js');
+const images = require('./src/images');
+const MainTabNavigator = require('./src/navigation/MainTabNavigator');
 
 export default class App extends React.Component {
   static defaultProps = {
     skipLoadingScreen: false,
   }
 
-  constructor(props: Readonly<{}>) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -43,9 +44,7 @@ export default class App extends React.Component {
       );
     }
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Hello World</Text>
-      </View>
+      <MainTabNavigator />
     )
   }
 }
