@@ -24,8 +24,10 @@
     "web": {
       "favicon": "./assets/images/favicon.png"
     },
+    "primaryColor": "#000",
     "extra": {
-      "backgroundColor": "#fafafa"
+      "backgroundColor": "#fafafa",
+      "textColor": "#454545"
     }
   }
 }

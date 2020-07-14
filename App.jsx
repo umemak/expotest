@@ -8,7 +8,7 @@ import {
 /* from app */
 const fonts = require('./src/fonts.js');
 const images = require('./src/images');
-const MainTabNavigator = require('./src/navigation/MainTabNavigator');
+const AppNavigator = require('./src/navigation/AppNavigator');
 
 export default class App extends React.Component {
   static defaultProps = {
@@ -44,7 +44,7 @@ export default class App extends React.Component {
       );
     }
     return (
-      <MainTabNavigator />
+      <AppNavigator />
     )
   }
 }
