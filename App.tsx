@@ -6,15 +6,15 @@ import {
   Font,
 } from 'expo';
 /* from app */
-import fonts from 'app/src/fonts';
-import images from 'app/src/images';
+const fonts = require('app/src/fonts');
+const images = require('app/src/images');
 
 export default class App extends React.Component {
   static defaultProps = {
     skipLoadingScreen: false,
   }
 
-  constructor(props) {
+  constructor(props: Readonly<{}>) {
     super(props);
 
     this.state = {
@@ -36,14 +36,14 @@ export default class App extends React.Component {
     if (!isLoadingComplete && !skipLoadingScreen) {
       return (
         <AppLoading
-          startAsync = {this.loadResourcesAsync}
-          onError = { error => console.warn(error) }
-          onFinish = { () => this.setState({ isLoadingComplete: true })}
+          startAsync={this.loadResourcesAsync}
+          onError={error => console.warn(error)}
+          onFinish={() => this.setState({ isLoadingComplete: true })}
         />
       );
     }
     return (
-      <View style = {{ flex: 1, alignItems: 'center', justifyContent: 'center '}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Hello World</Text>
       </View>
     )
