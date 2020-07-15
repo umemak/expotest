@@ -11,6 +11,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14
 #
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends net-tools lsof \
-    && npm install -g expo-cli
+    && apt-get -y install --no-install-recommends net-tools lsof vim \
+    && npm install -g npm expo-cli
 
