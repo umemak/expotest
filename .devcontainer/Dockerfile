@@ -13,4 +13,7 @@ RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends net-tools lsof vim \
     && npm install -g npm expo-cli
+    && wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+    && chmod a+x ~/.git-completion.bash
+    && echo "source ~/.git-completion.bash" >> ~/.bashrc
 
