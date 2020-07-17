@@ -20,7 +20,7 @@ import styles from './styles';
 }))
 export default class UserScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: navigation.getParam('title', '読み込み中');
+    headerTitle: navigation.getParam('title', '読み込み中'),
   })
 
   constructor(props) {

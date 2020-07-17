@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import { Ionicons } from '@expo/vector-icons';
 
 import styles from './styles';

@@ -2,14 +2,14 @@ import React from 'react';
 import { BackHandler } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
-import { reduxifyNavigator } from 'react-navigation-redux-helpers';
+import { createReduxContainer } from 'react-navigation-redux-helpers';
 
 import AppNavigator from './AppNavigator';
 
-const App = reduxifyNavigator(AppNavigator, 'root');
+const App = createReduxContainer(AppNavigator, 'root');
 
 @connect(state => ({
-  nav: state.nav.
+  nav: state.nav,
 }))
 export default class AppWithNavigationState extends React.Component {
   constructor(props) {

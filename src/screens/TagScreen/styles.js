@@ -1,10 +1,10 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { Constats } from 'expo';
+import Constants from 'expo-constants';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Constats.manifest.extra.backgroundColor,
+    backgroundColor: Constants.manifest.extra.backgroundColor,
   },
   header: {
     alignItems: 'center',

@@ -3,7 +3,8 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import { Constants, Video } from 'expo';
+import { Video } from 'expo';
+import Constants from 'expo-constants';
 
 import { Image } from 'react-native-expo-image-cache';
 import Hyperlink from 'react-native-hyperlink';
@@ -19,7 +20,7 @@ linkify.add('#', {
   validate: (text, pos) => {
     const tail = text.slice(pos);
     if (!linkify.re.hashtag) {
-      linkify.re.hashtag = new RegExp(/^[#]{0,2}?(w*[a-zA-Z0-9]+|[a-zA-Zo-0_]+|[a-zA-Z0-9_]w*)/gi);
+      linkify.re.hashtag = new RegExp(/^[#]{0,2}?(w*[a-zA-Z0-9]+|[a-zA-Z0-9_]+|[a-zA-Z0-9_]w*)/gi);
     }
     if (linkify.re.hashtag.test(tail)) {
       return tail.match(linkify.re.hashtag)[0].trim().length;

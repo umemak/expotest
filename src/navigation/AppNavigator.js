@@ -1,4 +1,5 @@
-import { createStackNavigator, NavigationActions } from 'react-navigation';
+import { NavigationActions } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import MainTabNavigator from './MainTabNavigator';
 import UserScreen from '../screens/UserScreen';

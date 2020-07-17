@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text as RNText } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 
 export default class Text extends React.Component {
   static defaultProps = {

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Video } from 'expo';
 
-import IconButton from '../../constants/IconButton';
+import IconButton from '../../components/IconButton';
 import styles from './styles';
 
 export default class TakePublishScreen extends React.Component {
