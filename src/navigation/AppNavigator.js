@@ -68,6 +68,12 @@ const navigateOnce = getStateForAction => (action, state) => {
     }
   }
 
+  if (state && type === 'TAKEMODAL_CLOSE') {
+    const newRoutes = state.routes.filter(r => (r.routeName !== 'TakeModal'));
+    const newIndex = newRoutes.length - 1;
+    return getStateForAction(action, { index: newIndex, routes: newRoutes });
+  }
+
   return getStateForAction(action, state);
 };
 
